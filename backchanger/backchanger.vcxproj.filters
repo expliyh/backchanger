@@ -21,9 +21,15 @@
     <ClCompile Include="changeback.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="download.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="changeback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="download.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
