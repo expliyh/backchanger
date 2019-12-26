@@ -2,10 +2,18 @@
 //
 
 #include <iostream>
+#include <Windows.h>
+#include <string>
+#include <sstream>
+using namespace std;
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	stringstream imgPath;
+	imgPath << "path\\img.jpg";
+	SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, (PVOID)imgPath.str().c_str(), SPIF_UPDATEINIFILE | SPIF_SENDCHANGE);
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
