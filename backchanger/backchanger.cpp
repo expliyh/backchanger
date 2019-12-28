@@ -5,6 +5,7 @@
 #include <fstream>
 #include "changeback.h"
 #include "download.h"
+#include <Windows.h>
 
 #define mainurl "http://expli.top/backchanger/"
 
@@ -21,13 +22,16 @@ int main()
 	string backnow;
 	fin >> backnow;
 	fin.close();
-//	system("del backnow.txt");
+	system("del backnow.txt");
 	string backurl = mainurl;
 	backurl += "images/";
 	backurl += backnow;
 	backurl += "/back.jpg";
 	download(backurl, "back.jpg");
 	change("back.jpg");
+	cout << "Loading......";
+	Sleep(1000);
+//	system("del back.jpg");
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

@@ -8,6 +8,7 @@ void download(string url,string filename)
 	_getcwd(buffer, MAX_PATH);
 	string a="\\";
 	a += filename;
+	DeleteUrlCacheEntryA(url.c_str());
 	strcat_s(buffer, a.c_str());
 	HRESULT Result = URLDownloadToFileA(NULL, url.c_str(), buffer, 0, NULL);
 	switch (Result)
