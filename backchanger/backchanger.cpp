@@ -7,7 +7,7 @@
 #include "download.h"
 #include <Windows.h>
 
-#define mainurl "http://expli.top/backchanger/"
+#define mainurl "http://expli.top/cloud/backchanger/"
 
 using namespace std;
 
@@ -16,22 +16,35 @@ using namespace std;
 int main()
 {
 	string guideurl = mainurl;
-	guideurl += "guide/backnow.txt";
-	download(guideurl, "backnow.txt");
-	ifstream fin("backnow.txt");
-	string backnow;
-	fin >> backnow;
+	guideurl += "guide/index.guide";
+	download(guideurl, "index.guide");
+	ifstream fin("index.guide");
+	string index;
+	fin >> index;
 	fin.close();
-	system("del backnow.txt");
+	system("del index.guide");
+	string secguidurl = mainurl;
+	secguidurl += "guide/";
+	string secguidname = index + ".guide";
+	secguidurl += secguidname;
+//	cout << secguidurl;
+	download(secguidurl, "secguid.guide");
+	ifstream secfin("secguid.guide");
+	string backname;
+	secfin >> backname;
+	backname += ".jpg";
+	secfin.close();
+	system("del secguid.guide");
+	index += "/";
 	string backurl = mainurl;
 	backurl += "images/";
-	backurl += backnow;
-	backurl += "/back.jpg";
+	backurl += index;
+	backurl += backname;
 	download(backurl, "back.jpg");
 	change("back.jpg");
 	cout << "Loading......";
 	Sleep(1000);
-//	system("del back.jpg");
+	system("del back.jpg");
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
