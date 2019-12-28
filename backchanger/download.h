@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <direct.h>
 #include <string>
+#include <urlmon.h>
+#pragma comment(lib, "urlmon.lib")
 
 using namespace std;
 

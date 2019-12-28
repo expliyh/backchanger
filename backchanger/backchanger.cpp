@@ -21,11 +21,11 @@ int main()
 	string backnow;
 	fin >> backnow;
 	fin.close();
-	system("del backnow.txt");
+//	system("del backnow.txt");
 	string backurl = mainurl;
-	backurl += "image/";
+	backurl += "images/";
 	backurl += backnow;
-	backurl += "back.jpg";
+	backurl += "/back.jpg";
 	download(backurl, "back.jpg");
 	change("back.jpg");
 }
