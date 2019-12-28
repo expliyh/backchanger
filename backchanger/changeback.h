@@ -4,4 +4,4 @@
 #include <sstream>
 using namespace std;
 
-void change(string folder);
+void change(string filename);

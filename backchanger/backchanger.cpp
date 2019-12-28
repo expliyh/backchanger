@@ -2,15 +2,32 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "changeback.h"
 #include "download.h"
+
+#define mainurl "http://expli.top/backchanger/"
+
 using namespace std;
 
 
 
 int main()
 {
-	
+	string guideurl = mainurl;
+	guideurl += "guide/backnow.txt";
+	download(guideurl, "backnow.txt");
+	ifstream fin("backnow.txt");
+	string backnow;
+	fin >> backnow;
+	fin.close();
+	system("del backnow.txt");
+	string backurl = mainurl;
+	backurl += "image/";
+	backurl += backnow;
+	backurl += "back.jpg";
+	download(backurl, "back.jpg");
+	change("back.jpg");
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

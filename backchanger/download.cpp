@@ -6,7 +6,7 @@ void download(string url,string filename)
 {
 	char buffer[MAX_PATH];
 	_getcwd(buffer, MAX_PATH);
-	string a = "//";
+	string a = "\\";
 	a += filename;
 	strcat_s(buffer, a.c_str());
 	HRESULT Result = URLDownloadToFileA(NULL, url.c_str(), buffer, 0, NULL);
