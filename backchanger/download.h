@@ -6,4 +6,4 @@
 
 using namespace std;
 
-void download(string url);
+void download(string url,string filename);

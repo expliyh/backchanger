@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "changeback.h"
+#include "download.h"
 using namespace std;
 
 
