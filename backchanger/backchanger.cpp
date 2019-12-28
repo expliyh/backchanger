@@ -15,6 +15,7 @@ using namespace std;
 
 int main()
 {
+//	system("del back.jpg");
 	string guideurl = mainurl;
 	guideurl += "guide/index.guide";
 	download(guideurl, "index.guide");
@@ -43,7 +44,7 @@ int main()
 	download(backurl, "back.jpg");
 	change("back.jpg");
 	cout << "Loading......";
-	Sleep(1000);
+	Sleep(2000);
 	system("del back.jpg");
 }
 
