@@ -152,12 +152,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="backchanger.cpp" />
+    <ClCompile Include="basic function.cpp" />
     <ClCompile Include="changeback.cpp" />
+    <ClCompile Include="checkres.cpp" />
     <ClCompile Include="download.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="basic function.h" />
     <ClInclude Include="changeback.h" />
+    <ClInclude Include="checkres.h" />
+    <ClInclude Include="define.h" />
     <ClInclude Include="download.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="backchanger.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

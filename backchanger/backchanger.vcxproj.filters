@@ -24,6 +24,12 @@
     <ClCompile Include="download.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="checkres.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="basic function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="changeback.h">
@@ -32,5 +38,22 @@
     <ClInclude Include="download.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="checkres.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="basic function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="backchanger.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

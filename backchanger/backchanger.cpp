@@ -5,25 +5,26 @@
 #include <fstream>
 #include "changeback.h"
 #include "download.h"
+#include "checkres.h"
+#include "define.h"
 #include <Windows.h>
-
-#define mainurl "http://expli.top/cloud/backchanger/"
 
 using namespace std;
 
+resolution res;
 
 
 int main()
 {
 //	system("del back.jpg");
 	string guideurl = mainurl;
-	guideurl += "guide/index.guide";
-	download(guideurl, "index.guide");
-	ifstream fin("index.guide");
+	
+	download(guideurl, "index" + nft);
+	ifstream fin("index" + nft);
 	string index;
 	fin >> index;
 	fin.close();
-	system("del index.guide");
+	system("del index" + nft);
 	string secguidurl = mainurl;
 	secguidurl += "guide/";
 	string secguidname = index + ".guide";
